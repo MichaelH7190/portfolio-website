@@ -23,4 +23,21 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+/* The teal thread: selection matches the accent color */
+::selection {
+  background: rgb(13 148 136 / 0.25);
+}
+
+/* Visible but unobtrusive keyboard focus */
+:focus-visible {
+  outline: 2px solid rgb(13 148 136);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+a {
+  transition: color 150ms ease;
 }
