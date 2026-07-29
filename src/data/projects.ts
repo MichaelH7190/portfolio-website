@@ -15,7 +15,8 @@
 
 export type Project = {
   name: string;
-  tagline: string;
+  tagline?: string; // omit to show the name alone
+  context?: string; // small uppercase line under the name, e.g. "NASA contractor · Software Intern · Summer 2025"
   stack: string[];
   contribution: string;
   decision: string;
@@ -27,13 +28,14 @@ export type Project = {
 export const projects: Project[] = [
   {
     name: "Intuitive Machines",
-    tagline: "TODO: one line on what this work is",
-    stack: ["TODO", "TODO"],
+    context: "NASA contractor · Software Engineer Intern · Summer 2026",
+    stack: ["TypeScript", "React", "Node.js", "Express", "MongoDB", "Docker"],
     contribution:
-      "TODO: 2-3 sentences on what you specifically built. Lead with the verb: built, designed, shipped, migrated.",
+      "Built a full-stack sensor list web app that replaces Excel tracking for multiple lunar lander programs.",
     decision:
-      "TODO: one real decision or tradeoff. e.g. 'Chose X over Y because Z, accepting the cost of W.'",
-    metric: "TODO: a number if you have one — otherwise delete this line",
+      "a tree-structured device hierarchy rendered as a dynamic table, where engineers add and manage devices at any depth and define new tables and columns without code changes.",
+    // TODO: verify these numbers with your manager before deploying
+    metric: "~20 engineers · designed to scale to 10,000+ devices",
     links: [{ label: "Code is private" }],
     // media: { src: "/projects/intuitive-machines.png", alt: "TODO" },
   },

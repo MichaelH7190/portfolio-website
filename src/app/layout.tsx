@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Michael H — Software Engineer", // TODO: match site.ts
+  title: "Michael Ho — Software Engineer",
   description:
-    "Software engineer portfolio — projects, experience, and contact.", // TODO
+    "Software engineer portfolio — projects, experience, and contact.",
 };
 
 export default function RootLayout({

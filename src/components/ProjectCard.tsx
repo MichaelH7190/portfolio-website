@@ -30,11 +30,18 @@ export default function ProjectCard({
         <div className="flex flex-col gap-1">
           <h3 className="text-lg font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">
             {project.name}
-            <span className="font-normal text-zinc-500 dark:text-zinc-400">
-              {" "}
-              — {project.tagline}
-            </span>
+            {project.tagline && (
+              <span className="font-normal text-zinc-500 dark:text-zinc-400">
+                {" "}
+                — {project.tagline}
+              </span>
+            )}
           </h3>
+          {project.context && (
+            <p className="font-mono text-[11px] font-medium tracking-widest text-teal-600 uppercase dark:text-teal-400">
+              {project.context}
+            </p>
+          )}
           <p className="font-mono text-xs text-zinc-500 dark:text-zinc-400">
             {project.stack.join(" · ")}
           </p>
