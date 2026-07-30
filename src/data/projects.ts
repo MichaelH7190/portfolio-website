@@ -31,13 +31,15 @@ export const projects: Project[] = [
     context: "NASA contractor · Software Engineer Intern · Summer 2026",
     stack: ["TypeScript", "React", "Node.js", "Express", "MongoDB", "Docker"],
     contribution:
-      "Built a full-stack sensor list web app that replaces Excel tracking for multiple lunar lander programs.",
+      "Built a full-stack sensor list web app that replaces Excel tracking for multiple lunar lander programs. A tree structured device hierarchy where engineers add and manage devices at any depth and define new tables and columns with minimal code changes.",
     decision:
-      "a tree-structured device hierarchy rendered as a dynamic table, where engineers add and manage devices at any depth and define new tables and columns without code changes.",
-    // TODO: verify these numbers with your manager before deploying
+      "Design: Just two generic data models where the data is self-describing. A versioning system that tracks deltas on each branch with immutable and tagged versions.",
     metric: "~20 engineers · designed to scale to 10,000+ devices",
     links: [{ label: "Code is private" }],
-    // media: { src: "/projects/intuitive-machines.png", alt: "TODO" },
+    media: {
+      src: "/projects/intuitive-machines.jpg",
+      alt: "Intuitive Machines Nova-C lunar lander standing on its test stand",
+    },
   },
   {
     name: "Roster",

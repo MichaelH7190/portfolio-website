@@ -42,28 +42,34 @@ export default function ProjectCard({
               {project.context}
             </p>
           )}
-          <p className="font-mono text-xs text-zinc-500 dark:text-zinc-400">
-            {project.stack.join(" · ")}
-          </p>
         </div>
 
         <p className="text-sm leading-relaxed text-zinc-700 dark:text-zinc-300">
           {project.contribution}
         </p>
 
-        <p className="border-l-2 border-teal-500 pl-3.5 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
-          <span className="font-medium text-zinc-900 dark:text-zinc-100">
-            Design decision:
-          </span>{" "}
+        <p className="border-l-2 border-teal-500 pl-3.5 text-sm leading-relaxed text-zinc-600 dark:text-zinc-300">
           {project.decision}
         </p>
 
+        {project.metric && (
+          <p className="font-mono text-sm font-medium text-teal-600 dark:text-teal-400">
+            {project.metric}
+          </p>
+        )}
+
+        <ul className="flex flex-wrap gap-1.5 font-mono text-[11px] text-zinc-600 dark:text-zinc-400">
+          {project.stack.map((tech) => (
+            <li
+              key={tech}
+              className="rounded-full border border-zinc-200 bg-zinc-50 px-2.5 py-1 dark:border-zinc-800 dark:bg-zinc-900"
+            >
+              {tech}
+            </li>
+          ))}
+        </ul>
+
         <div className="flex flex-wrap items-baseline gap-5 text-sm">
-          {project.metric && (
-            <span className="font-mono font-medium text-teal-600 dark:text-teal-400">
-              {project.metric}
-            </span>
-          )}
           {project.links.map((link) =>
             link.href ? (
               <a
