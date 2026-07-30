@@ -2,9 +2,6 @@ import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/data/projects";
 import { site } from "@/data/site";
 
-const linkStyle =
-  "text-zinc-700 underline decoration-zinc-300 underline-offset-4 hover:text-teal-600 hover:decoration-teal-500 dark:text-zinc-300 dark:decoration-zinc-700 dark:hover:text-teal-400";
-
 function GitHubIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5" aria-hidden>
@@ -30,6 +27,38 @@ function EmailIcon() {
   );
 }
 
+// Shared icon row — used in the header and the footer
+function SocialLinks() {
+  const iconLink =
+    "text-zinc-500 transition-colors hover:text-teal-600 dark:text-zinc-400 dark:hover:text-teal-400";
+
+  return (
+    <nav className="flex gap-4">
+      <a
+        href={site.github}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub"
+        className={iconLink}
+      >
+        <GitHubIcon />
+      </a>
+      <a
+        href={site.linkedin}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn"
+        className={iconLink}
+      >
+        <LinkedInIcon />
+      </a>
+      <a href={`mailto:${site.email}`} aria-label="Email" className={iconLink}>
+        <EmailIcon />
+      </a>
+    </nav>
+  );
+}
+
 export default function Home() {
   return (
     <div className="mx-auto flex w-full max-w-4xl flex-1 flex-col px-6 py-16 sm:py-24">
@@ -38,33 +67,9 @@ export default function Home() {
           {site.name}
         </h1>
         <p className="text-lg text-zinc-900 dark:text-zinc-50">{site.title}</p>
-        <nav className="flex gap-4 pt-3">
-          <a
-            href={site.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-            className="text-zinc-500 transition-colors hover:text-teal-600 dark:text-zinc-400 dark:hover:text-teal-400"
-          >
-            <GitHubIcon />
-          </a>
-          <a
-            href={site.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-            className="text-zinc-500 transition-colors hover:text-teal-600 dark:text-zinc-400 dark:hover:text-teal-400"
-          >
-            <LinkedInIcon />
-          </a>
-          <a
-            href={`mailto:${site.email}`}
-            aria-label="Email"
-            className="text-zinc-500 transition-colors hover:text-teal-600 dark:text-zinc-400 dark:hover:text-teal-400"
-          >
-            <EmailIcon />
-          </a>
-        </nav>
+        <div className="pt-3">
+          <SocialLinks />
+        </div>
       </header>
 
       <p className="max-w-2xl pt-10 leading-relaxed text-zinc-700 dark:text-zinc-300">
@@ -77,10 +82,8 @@ export default function Home() {
         ))}
       </main>
 
-      <footer className="flex items-baseline justify-between gap-4 border-t border-zinc-200 pt-8 pb-4 text-sm text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
-        <a href={`mailto:${site.email}`} className={linkStyle}>
-          {site.email}
-        </a>
+      <footer className="flex items-center justify-between gap-4 border-t border-zinc-200 pt-8 pb-4 dark:border-zinc-800">
+        <SocialLinks />
         <span className="font-mono text-xs text-zinc-400 dark:text-zinc-600">
           © {new Date().getFullYear()}
         </span>
