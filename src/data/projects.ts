@@ -33,7 +33,7 @@ export const projects: Project[] = [
     contribution:
       "Built a full-stack sensor list web app that replaces Excel tracking for multiple lunar lander programs. A tree structured device hierarchy where engineers add and manage devices at any depth and define new tables and columns with minimal code changes.",
     decision:
-      "Design: Just two generic data models where the data is self-describing. A versioning system that tracks deltas on each branch with immutable and tagged versions.",
+      "Design: The tables are just two generic data models where the data is self-describing. A versioning system that tracks deltas on each branch with immutable and tagged versions.",
     metric: "~20 engineers · designed to scale to 10,000+ devices",
     links: [{ label: "Code is private" }],
     media: {
@@ -43,16 +43,17 @@ export const projects: Project[] = [
   },
   {
     name: "Roster",
-    tagline: "TODO: one line on what it is",
-    stack: ["TODO", "TODO"],
-    contribution: "TODO: 2-3 sentences on what you specifically built.",
-    decision: "TODO: one real decision or tradeoff you made.",
-    metric: "TODO: a number if you have one — otherwise delete this line",
-    links: [
-      { label: "Live demo", href: "https://TODO" },
-      { label: "GitHub", href: "https://github.com/TODO" },
-    ],
-    // media: { src: "/projects/roster.png", alt: "TODO" },
+    context: "YC S26 · Code Contributor · Feb – Mar 2026",
+    stack: ["TypeScript", "React", "Tailwind CSS"],
+    contribution:
+      "Built the founding demo: a sports-betting frontend prototype where users compete against each other instead of the house. Pick players, bet the over/under head-to-head against an opponent, and the winner takes the pot.",
+    decision:
+      "Built just the frontend against a fake data layer that behaves like a real server, so we could present a working product and see what was fun and get feedback from users.",
+    links: [{ label: "Code is private" }],
+    media: {
+      src: "/projects/roster.png",
+      alt: "Roster sports-betting prototype",
+    },
   },
   {
     name: "Crayons to Classrooms",
