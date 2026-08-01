@@ -58,7 +58,7 @@ export const projects: Project[] = [
     contribution:
       "Built the founding demo: a sports-betting frontend prototype where users compete against each other instead of the house. Pick players, bet the over/under head-to-head against an opponent, and the winner takes the pot.",
     decision:
-      "Built just the frontend against a fake data layer so we could present a demo and get feedback from investors.",
+      "Design: Built just the frontend against a fake data layer so we could present a demo and get feedback from investors.",
     metric: "3 game modes · 30+ NBA players",
     links: [{ label: "Code is private" }],
     media: {
@@ -83,6 +83,7 @@ export const projects: Project[] = [
       "Inventory management for a nonprofit supplying school materials. Developed full-stack undo functionality for inventory movements and built the storage locations routes with Zod schema validation. Also built the main dashboard. Collaborated on a team of 9 students with a PM, EM, and designer.",
     decision:
       "Design: Did not define data models twice. Instead, used Zod to validate data at the API before it causes problems downstream.",
+    metric: "50,000+ students · $2.6M in school supplies in the past year",
     links: [
       {
         label: "GitHub",
@@ -102,8 +103,8 @@ export const projects: Project[] = [
     contribution:
       "Trained and validated object detection models on 200+ annotated medical images. Built the pipelines for training, testing, and loss tracking. Evaluated performance with precision, recall, and mean average precision across multiple IoU thresholds.",
     decision:
-      "TODO: one real decision or tradeoff — e.g. why compare two-stage (Faster/Mask R-CNN) against single-stage architectures? Accuracy vs. inference speed for a mobile health deployment?",
-    metric: ">95% mAP across all classes at IoU ≤ 0.8",
+      "Design: Instead of hardcoding one model, I used YAML configs feeding a single model factory so comparing different architectures is a minimal config change.",
+    metric: "4 architectures compared · >95% mAP across all classes at IoU ≤ 0.8",
     links: [
       {
         label: "GitHub",
