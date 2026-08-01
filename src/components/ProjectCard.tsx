@@ -96,15 +96,21 @@ export default function ProjectCard({
         </div>
       </div>
 
-      {/* Small thumbnail on the right */}
-      <div className="relative aspect-video w-full shrink-0 overflow-hidden rounded-lg border border-zinc-200 sm:w-52 dark:border-zinc-800">
+      {/* Small thumbnail on the right — hardcoded 16:10 box, images fill it */}
+      <div
+        className={`relative w-full shrink-0 self-start overflow-hidden rounded-lg border border-zinc-200 dark:border-zinc-800 ${
+          project.media?.portrait
+            ? "aspect-[4/5] sm:w-56"
+            : "aspect-[16/10] sm:w-86"
+        }`}
+      >
         {project.media ? (
           <Image
             src={project.media.src}
             alt={project.media.alt}
             fill
             className="object-cover"
-            sizes="(min-width: 640px) 13rem, 100vw"
+            sizes="(min-width: 640px) 24rem, 100vw"
           />
         ) : (
           <div className="flex h-full w-full items-center justify-center bg-zinc-50 dark:bg-zinc-900/60">
