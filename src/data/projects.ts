@@ -43,7 +43,7 @@ export const projects: Project[] = [
       "Built a full-stack sensor list web app that replaces Excel tracking for multiple lunar lander programs. A tree structured device hierarchy where engineers add and manage devices at any depth and define new tables and columns with minimal code changes.",
     decision:
       "Design: The tables are just two generic data models where the data is self-describing. A versioning system that tracks deltas on each branch with immutable and tagged versions.",
-    metric: "~20 engineers · designed to scale to 10,000+ devices",
+    metric: "20+ engineers · designed to scale to 10,000+ devices",
     links: [{ label: "Code is private" }],
     media: {
       src: landerImg,
